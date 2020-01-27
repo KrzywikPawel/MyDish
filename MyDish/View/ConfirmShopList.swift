@@ -15,7 +15,6 @@ class ConfirmShopList: UIView{
     
     @IBOutlet weak var confirmTable: UITableView!
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         self.backgroundColor = .systemGray6
