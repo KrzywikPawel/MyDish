@@ -26,7 +26,8 @@ extension CookLaterViewController:UICollectionViewDataSource,UICollectionViewDel
         dish = TakeDataToMainView().takeDishFromId(id: dishesInArray[indexPath.row])
         cell.delegate = self
         cell.cookLaterButton?.setImage(UIImage(named: "delete"), for: .normal)
-        cell.configurateWithItem(dish.image, dish.name, dish.time, dish.level,dish.id)
+        let width = collectionView.contentSize.width
+        cell.configurateWithItem(width,dish.image, dish.name, dish.time, dish.level,dish.id)
         return cell
     }
     

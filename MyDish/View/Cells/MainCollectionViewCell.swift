@@ -25,8 +25,13 @@ class MainCollectionViewCell: UICollectionViewCell {
     
     private let customize = CustomizeMainDescription()
     weak var delegate: BtnAction?
-    func configurateWithItem(_ dishImgName: String,_ name:String,_ time: String,_ lvl:Int,_ id: Int){
+    
+    func configurateWithItem(_ width: CGFloat,_ dishImgName: String,_ name:String,_ time: String,_ lvl:Int,_ id: Int){
+        self.widthAnchor.constraint(equalToConstant: width).isActive = true
         dishImage?.image = UIImage(named: dishImgName)
+        dishImage?.translatesAutoresizingMaskIntoConstraints = false
+        dishImage?.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
+        dishImage?.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
         nameLabel?.text = name
         var array = [buttonLvl1,buttonLvl2,buttonLvl3]
         array = customize.levelCustomization(lvl, array as! [UIButton])
