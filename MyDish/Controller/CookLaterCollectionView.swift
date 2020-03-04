@@ -8,10 +8,10 @@
 
 import Foundation
 import UIKit
-extension CookLaterViewController:UICollectionViewDataSource,UICollectionViewDelegate, BtnAction{
+extension CookLaterViewController:UICollectionViewDataSource,UICollectionViewDelegate, BtnAction {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if dishesInArray.count == 0{
+        if dishesInArray.count == 0 {
             let setMessage = SetEmptyTableAndCollectionMessage()
             setMessage.collectionSetEmptyMessage(collectionView,emptyMessage)
         }else{
@@ -31,7 +31,7 @@ extension CookLaterViewController:UICollectionViewDataSource,UICollectionViewDel
         return cell
     }
     
-    func addToShopListAction(_ sender: UIButton){
+    func addToShopListAction(_ sender: UIButton) {
         let dish = TakePropertiesData().takeProperties(id: sender.tag)
         let dishStruct = TakeDataToMainView().takeDishFromId(id: dish.id)
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
@@ -42,11 +42,11 @@ extension CookLaterViewController:UICollectionViewDataSource,UICollectionViewDel
         pushConfirmShopListVC.name = dishStruct.name
         self.navigationController?.pushViewController(pushConfirmShopListVC, animated: true)
     }
-//    delete dish from list
-    func cookLaterAction(_ sender: UIButton){
+
+    func cookLaterAction(_ sender: UIButton) {
         let id = sender.tag
-        for (index,value) in dishesInArray.enumerated(){
-            if(value == id){
+        for (index,value) in dishesInArray.enumerated() {
+            if(value == id) {
                 dishesInArray.remove(at: index)
                 break;
             }

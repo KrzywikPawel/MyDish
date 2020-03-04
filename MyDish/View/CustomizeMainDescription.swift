@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class CustomizeMainDescription{
+class CustomizeMainDescription {
     private var arrayDish: [Dish] = []
     init() {
     }
@@ -17,7 +17,7 @@ class CustomizeMainDescription{
     private let circleFill = UIImage(systemName: "circle.fill")
     private let circle = UIImage(systemName: "circle")
     
-    private func setColourLvlCircle(_ array: [UIButton]) -> [UIButton]  {
+    private func setColourLvlCircle(_ array: [UIButton]) -> [UIButton] {
         array[0].tintColor = .systemGreen
         array[1].tintColor = .orange
         array[2].tintColor = .red
@@ -48,7 +48,7 @@ class CustomizeMainDescription{
         return customizeBtnArray
     }
     
-    func upperTime(_ min: String) -> NSMutableAttributedString{
+    func upperTime(_ min: String) -> NSMutableAttributedString {
         let nr  = min.indexOf(char: "m")
         let attributedString = NSMutableAttributedString(string: min)
         let range = NSRange(location: nr!, length: 3)

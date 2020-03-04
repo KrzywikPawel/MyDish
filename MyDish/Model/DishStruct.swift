@@ -7,7 +7,7 @@
 //
 
 import Foundation
-struct Dish:Decodable{
+struct Dish:Decodable {
     let id:Int
     let image: String
     let name: String

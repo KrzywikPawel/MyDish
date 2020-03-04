@@ -10,7 +10,7 @@ import Foundation
 class TakePropertiesData {
     
     
-    private func parseData() -> Array<DishPropertiesStruct>{
+    private func takeDishProperties() -> Array<DishPropertiesStruct> {
         var arrayProperties: Array<DishPropertiesStruct> = []
         do{
             let url = Bundle.main.url(forResource: "PropertiesDish", withExtension: "json")
@@ -22,9 +22,9 @@ class TakePropertiesData {
         return arrayProperties
     }
     
-    func takeProperties(id:Int) -> DishPropertiesStruct{
+    func takeProperties(id:Int) -> DishPropertiesStruct {
         var properties: DishPropertiesStruct = DishPropertiesStruct(id: 0, products: [],quantity: [], steps: [])
-        let arrayProperties = parseData()
+        let arrayProperties = takeDishProperties()
         for item in arrayProperties{
             if(item.id == id){
                 properties = item

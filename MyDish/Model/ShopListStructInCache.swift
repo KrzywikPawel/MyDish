@@ -8,28 +8,28 @@
 
 import Foundation
 struct  ShopListStructInCache {
-    static func save (_ value: [ShopListDataStruct]!){
+    static func save (_ value: [ShopListDataStruct]!) {
            UserDefaults.standard.set(try? PropertyListEncoder().encode(value), forKey: "shopList")
        }
     
-     func delete( index: Int){
+     func delete( index: Int) {
         var shopList = ShopListStructInCache.get()
         shopList.remove(at: index)
         ShopListStructInCache.save(shopList)
     }
     
-    static func get() -> [ShopListDataStruct]{
+    static func get() -> [ShopListDataStruct] {
         var shopList: [ShopListDataStruct] = []
         do{
             let data = UserDefaults.standard.value(forKey: "shopList") ?? Data()
             shopList = try PropertyListDecoder().decode([ShopListDataStruct].self, from: data as! Data)
-        }catch{
+        } catch {
             print("error")
         }
         return shopList
     }
     
-    static func clear(){
+    static func clear() {
         UserDefaults.standard.removeObject(forKey: "shopList")        
     }
 }

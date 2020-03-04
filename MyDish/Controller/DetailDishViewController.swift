@@ -22,12 +22,12 @@ class DetailDishViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        takeData()
+        takeDishProperties()
         viewSet()
         leftBarBtnItem()   
     }
     
-    private func viewSet(){
+    private func viewSet() {
         setView.setNavigation(self.navigationController!)
         setView.setNameLbl(name)
         setView.setTimeLbl(time)
@@ -36,10 +36,9 @@ class DetailDishViewController: UIViewController {
         setView.getShopListBtn().addTarget(self, action: #selector(addToShopList), for: .touchUpInside)
     }
     
-    private func takeData() {
-        //method takeData
-        let takeData = TakePropertiesData()
-        let properties = takeData.takeProperties(id: id)
+    private func takeDishProperties() {
+        let takeProperties = TakePropertiesData()
+        let properties = takeProperties.takeProperties(id: id)
         productsArray = properties.products
         quantityProducts = properties.quantity
         directions = properties.steps
@@ -55,22 +54,22 @@ class DetailDishViewController: UIViewController {
         navigationItem.leftBarButtonItem = leftItem
     }
     
-    @objc private func backToMainCollection(sender: UIButton){
+    @objc private func backToMainCollection(sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
     
-    @objc private func cookLater(){
+    @objc private func cookLater() {
         let key = "arrayCookLater"
-        let defaults = UserDefaults.standard
-        var arrayLaterCookDishes = defaults.array(forKey: key)  as? [Int] ?? [Int]()
+        let operationInMemory = UserDefaults.standard
+        var arrayLaterCookDishes = operationInMemory.array(forKey: key)  as? [Int] ?? [Int]()
         if arrayLaterCookDishes.contains(id){
         }else{
             arrayLaterCookDishes.append(id)
         }
-        defaults.set(arrayLaterCookDishes, forKey: key)
+        operationInMemory.set(arrayLaterCookDishes, forKey: key)
     }
     
-    @objc private func addToShopList(){
+    @objc private func addToShopList() {
         let dish = TakePropertiesData().takeProperties(id: id)
         let dishStruct = TakeDataToMainView().takeDishFromId(id: dish.id)
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)

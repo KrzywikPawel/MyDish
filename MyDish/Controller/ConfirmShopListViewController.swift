@@ -32,21 +32,21 @@ class ConfirmShopListViewController: UIViewController {
     private func customizeNavigationBar() {
         self.title = titleText
         let backBtn = UIButton(type: .custom)
-        setView.customizeBackBtn(backBtn)
+        setView.backBtnLayout(backBtn)
         let leftItem = UIBarButtonItem(customView: backBtn)
         self.navigationItem.leftBarButtonItem = leftItem
         backBtn.addTarget(self, action: #selector(backToView(sender:)), for: .touchUpInside)
         
     }
     
-    @objc private func backToView(sender: UIButton){
+    @objc private func backToView(sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
     
     @objc func confirm(_ sender: UIButton) {
         if arraySavedProducts.isEmpty{
             emptyArrayAlert()
-        }else{
+        } else {
             let shopList = ShopListDataStruct()
             shopList.id = id
             shopList.name = name
@@ -66,7 +66,7 @@ class ConfirmShopListViewController: UIViewController {
         }
     }
     
-    private func emptyArrayAlert(){
+    private func emptyArrayAlert() {
         let alert = UIAlertController(title: "Lista Pusta", message: alertText, preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "Close", style: UIAlertAction.Style.default, handler:{ _ in}))
         self.present(alert, animated: true, completion: nil)

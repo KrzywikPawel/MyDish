@@ -9,7 +9,8 @@
 import Foundation
 import UIKit
 
-extension ShopListViewController: UITableViewDelegate, UITableViewDataSource{
+extension ShopListViewController: UITableViewDelegate, UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return shopList[section].count
     }
@@ -18,7 +19,7 @@ extension ShopListViewController: UITableViewDelegate, UITableViewDataSource{
         if headerName.count == 0{
             let setMessage = SetEmptyTableAndCollectionMessage()
             setMessage.tableSetEmptyMessage(tableView, emptyMessage)
-        }else{
+        } else {
             tableView.restore()
         }
         return headerName.count

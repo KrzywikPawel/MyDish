@@ -1,5 +1,5 @@
 import UIKit
-extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, BtnAction{
+extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, BtnAction {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return arrayDish.count
@@ -13,7 +13,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
         return cell
     }
     
-    func addToShopListAction(_ sender: UIButton){
+    func addToShopListAction(_ sender: UIButton) {
         let dish = TakePropertiesData().takeProperties(id: sender.tag)
         let storyboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let pushConfirmShopListVC = storyboard.instantiateViewController(identifier: "ConfirmShopListViewController") as! ConfirmShopListViewController
@@ -24,13 +24,13 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
         self.navigationController?.pushViewController(pushConfirmShopListVC, animated: true)
     }
     
-    func cookLaterAction(_ sender: UIButton){
-        arrayLaterCookDishes = defaults.array(forKey: "arrayCookLater")  as? [Int] ?? [Int]()
+    func cookLaterAction(_ sender: UIButton) {
+        arrayLaterCookDishes = operationInMemory.array(forKey: "arrayCookLater")  as? [Int] ?? [Int]()
         if arrayLaterCookDishes.contains(sender.tag){
-        }else{
+        } else {
             arrayLaterCookDishes.append(sender.tag)
         }
-        defaults.set(arrayLaterCookDishes, forKey: "arrayCookLater")
+        operationInMemory.set(arrayLaterCookDishes, forKey: "arrayCookLater")
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

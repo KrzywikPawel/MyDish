@@ -8,7 +8,8 @@
 
 import Foundation
 import UIKit
-extension DetailDishViewController: UITableViewDelegate,UITableViewDataSource{
+extension DetailDishViewController: UITableViewDelegate,UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if (tableView == setView.getIngredientsTable()){
             return productsArray.count

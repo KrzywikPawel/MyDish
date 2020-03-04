@@ -14,7 +14,7 @@ class ConfirmShopListTableViewCell: UITableViewCell {
     @IBOutlet private weak var nameLbl: UILabel!
     @IBOutlet private weak var checkBtn: UIButton!
     
-    func configurateWithItem(_ quantity: String,_ name: String, _ width: CGFloat, _ tag: Int){
+    func configurateWithItem(_ quantity: String,_ name: String, _ width: CGFloat, _ tag: Int) {
         setCell(width)
         setQuantityLbl(quantity)
         setNameLbl(name)
@@ -27,7 +27,7 @@ class ConfirmShopListTableViewCell: UITableViewCell {
         layer.borderColor = UIColor.systemGray6.cgColor
     }
     
-    private func setNameLbl(_ name: String){
+    private func setNameLbl(_ name: String) {
         nameLbl.text = name
         nameLbl.font = UIFont.boldSystemFont(ofSize: 17)
     }
@@ -37,7 +37,7 @@ class ConfirmShopListTableViewCell: UITableViewCell {
         quantityLbl.text = quantity
     }
     
-    private func checkBtnAction(_ tag: Int){
+    private func checkBtnAction(_ tag: Int) {
         checkBtn.tintColor = .systemGreen
         checkBtn.tag = tag
         let vc = ConfirmShopListViewController()

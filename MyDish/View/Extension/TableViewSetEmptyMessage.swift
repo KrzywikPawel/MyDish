@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 extension UITableView{
-    func setEmptyMessage(_ message: String){
+    func setEmptyMessage(_ message: String) {
         let messageLbl = UILabel(frame: CGRect(x: 0, y: 0, width: self.bounds.width, height: self.bounds.height))
         messageLbl.text = message
         messageLbl.font = UIFont(name: "Avenir-Light", size: 18)
@@ -21,7 +21,7 @@ extension UITableView{
         self.separatorStyle = .none
     }
     
-    func restore(){
+    func restore() {
         self.backgroundView = nil
         self.separatorStyle = .singleLine
     }

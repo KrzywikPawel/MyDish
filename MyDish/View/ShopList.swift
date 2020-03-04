@@ -9,14 +9,14 @@
 import Foundation
 import UIKit
 
-class ShopList: UIView{
+class ShopList: UIView {
     @IBOutlet weak var shopListTable: UITableView!
     
     override func awakeFromNib() {
         setShopListTable()
     }
     
-   private func setShopListTable(){
+   private func setShopListTable() {
         shopListTable.tableFooterView = UIView()
         shopListTable.backgroundColor = .systemGray6
     }

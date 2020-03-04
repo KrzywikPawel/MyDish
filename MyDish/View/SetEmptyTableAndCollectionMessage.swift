@@ -9,13 +9,13 @@
 import Foundation
 import UIKit
 
-class SetEmptyTableAndCollectionMessage{
+class SetEmptyTableAndCollectionMessage {
     
-    func collectionSetEmptyMessage(_ collectionView: UICollectionView, _ message: String){
+    func collectionSetEmptyMessage(_ collectionView: UICollectionView, _ message: String) {
         collectionView.setEmptyMessage(message)
     }
     
-    func tableSetEmptyMessage(_ tableView: UITableView, _ message: String){
+    func tableSetEmptyMessage(_ tableView: UITableView, _ message: String) { 
         tableView.setEmptyMessage(message)
     }
     

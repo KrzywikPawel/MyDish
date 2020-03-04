@@ -26,7 +26,7 @@ class ShopListViewController: UIViewController {
         setView.shopListTable.register(headerNIB, forHeaderFooterViewReuseIdentifier: idHeader)
     }
     
-    @objc private func addTapped()  {
+    @objc private func addTapped() {
         ShopListStructInCache.clear()
         viewWillAppear(false)
     }

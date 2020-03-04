@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-extension ShopListViewController: deleteBtnAction{
+extension ShopListViewController: deleteBtnAction {
     
      func deleteAction(at indexPath:IndexPath,tableView: UITableView) -> UIContextualAction {
         var sectionWithDeleteProduct = self.shopList[indexPath.section]
@@ -16,7 +16,7 @@ extension ShopListViewController: deleteBtnAction{
             sectionWithDeleteProduct.remove(at: indexPath.row)
             self.shopList[indexPath.section] = sectionWithDeleteProduct
             tableView.deleteRows(at: [indexPath], with: .automatic)
-            if(sectionWithDeleteProduct.count == 0){
+            if(sectionWithDeleteProduct.count == 0) {
                 self.shopList.remove(at: indexPath.section)
                 self.headerName.remove(at: indexPath.section)
                 let indexSet = IndexSet(arrayLiteral: indexPath.section)
@@ -35,14 +35,12 @@ extension ShopListViewController: deleteBtnAction{
         return action
     }
 
-      func deleteBtnAction(_ sender: UIButton){
+      func deleteBtnAction(_ sender: UIButton) {
          let sectionId = sender.tag
          headerName.remove(at: sectionId)
          shopList.remove(at: sectionId)
          let shopListStruct = ShopListStructInCache()
          shopListStruct.delete(index: sectionId)
         setView.shopListTable.reloadData()
-         
      }
-    
 }

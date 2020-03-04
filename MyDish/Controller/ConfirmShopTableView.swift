@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-extension ConfirmShopListViewController: UITableViewDelegate,UITableViewDataSource{
+extension ConfirmShopListViewController: UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return products.count
@@ -23,13 +23,13 @@ extension ConfirmShopListViewController: UITableViewDelegate,UITableViewDataSour
         return cell
     }
     
-    @objc func check(_ sender: UIButton){
+    @objc func check(_ sender: UIButton) {
         let id = sender.tag
         if sender.isSelected{
             sender.isSelected = false
             arraySavedQuantity.append(quantityProduct[id])
             arraySavedProducts.append(products[id])
-        }else{
+        } else {
             sender.isSelected = true
             //if removable index whose is after another before deleted, array change indexes (without hole) conditions find correct index
             if let i = arraySavedProducts.firstIndex(where: {$0 == products[id]}){

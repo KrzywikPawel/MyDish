@@ -13,7 +13,7 @@ class DirectionsTableViewCell: UITableViewCell {
     @IBOutlet weak var nrStepsLbl: UILabel!
     @IBOutlet weak var directionLbl: UILabel!
     
-    func configurateWithItem(step: Int,direction: String){
+    func configurateWithItem(step: Int,direction: String) {
         nrStepsLbl.text = "step \(step)"
         nrStepsLbl.font = nrStepsLbl.font.withSize(13)
         nrStepsLbl.textColor = .systemGray
