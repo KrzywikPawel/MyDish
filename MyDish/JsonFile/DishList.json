@@ -19,5 +19,19 @@
       "name": "Musli",
       "time": "5",
       "level": 1
-  }
+  },
+  {
+      "id":4,
+      "image": "deserpasha",
+      "name": "Deser Pasha",
+      "time": "10",
+      "level": 2
+  },
+  {
+      "id":5,
+      "image": "pasta",
+      "name": "Pasta jajeczna",
+      "time": "30",
+      "level": 2
+  },
 ]

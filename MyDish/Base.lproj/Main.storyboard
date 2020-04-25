@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wmI-xG-dFy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wmI-xG-dFy">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,11 +12,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyDish" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="G3E-M2-XeS">
-                                <rect key="frame" x="0.0" y="44" width="600" height="507"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="574"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="GD9-Uz-pv0">
                                     <size key="itemSize" width="112" height="99"/>
@@ -79,7 +80,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cDh-Qf-K2l">
-                                                        <rect key="frame" x="288" y="348" width="60" height="60"/>
+                                                        <rect key="frame" x="318" y="348" width="30" height="30"/>
                                                         <state key="normal" image="shopBasket"/>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="8Id-7b-jnZ">
@@ -108,13 +109,13 @@
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qe1-ds-2Pg">
-                                                                            <rect key="frame" x="15" y="11.5" width="42" height="21"/>
+                                                                            <rect key="frame" x="15" y="11" width="42" height="21.5"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UrD-QM-9FX">
-                                                                            <rect key="frame" x="165" y="11.5" width="42" height="21"/>
+                                                                            <rect key="frame" x="165" y="11" width="42" height="21.5"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
@@ -123,10 +124,13 @@
                                                                     <constraints>
                                                                         <constraint firstItem="Qe1-ds-2Pg" firstAttribute="centerY" secondItem="fUb-LG-RV0" secondAttribute="centerY" id="5Th-UM-7NN"/>
                                                                         <constraint firstItem="UrD-QM-9FX" firstAttribute="centerY" secondItem="fUb-LG-RV0" secondAttribute="centerY" id="6Gy-JD-bRp"/>
+                                                                        <constraint firstItem="UrD-QM-9FX" firstAttribute="leading" secondItem="fUb-LG-RV0" secondAttribute="leading" constant="165" id="Ahj-ob-5Ob"/>
                                                                         <constraint firstItem="UrD-QM-9FX" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fUb-LG-RV0" secondAttribute="leadingMargin" id="QWW-ZC-YdE"/>
+                                                                        <constraint firstItem="UrD-QM-9FX" firstAttribute="bottom" secondItem="fUb-LG-RV0" secondAttribute="bottomMargin" id="Y8E-Tz-GAf"/>
+                                                                        <constraint firstItem="UrD-QM-9FX" firstAttribute="baseline" secondItem="Qe1-ds-2Pg" secondAttribute="baseline" id="dfT-FA-RxS"/>
                                                                         <constraint firstItem="Qe1-ds-2Pg" firstAttribute="leading" secondItem="fUb-LG-RV0" secondAttribute="leadingMargin" id="iRQ-18-hbM"/>
                                                                         <constraint firstItem="UrD-QM-9FX" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Qe1-ds-2Pg" secondAttribute="trailing" constant="8" symbolic="YES" id="r1j-p7-VKx"/>
-                                                                        <constraint firstAttribute="trailing" secondItem="UrD-QM-9FX" secondAttribute="trailing" constant="150" id="yia-P9-IwU"/>
+                                                                        <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="UrD-QM-9FX" secondAttribute="trailing" constant="150" id="yia-P9-IwU"/>
                                                                     </constraints>
                                                                 </tableViewCellContentView>
                                                                 <connections>
@@ -313,18 +317,18 @@
             <objects>
                 <viewController storyboardIdentifier="ShopListViewController" id="kBr-DF-7Yl" customClass="ShopListViewController" customModule="MyDish" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F1i-at-9Gf" customClass="ShopList" customModule="MyDish" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YYW-Qu-2eg">
-                                <rect key="frame" x="0.0" y="44" width="600" height="507"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="574"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ShopListTableViewCell" rowHeight="60" id="vmw-LL-0ut" customClass="ShopListTableViewCell" customModule="MyDish" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="60"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vmw-LL-0ut" id="wU7-lt-VM1">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9e7-qw-48N">
@@ -387,18 +391,18 @@
             <objects>
                 <viewController storyboardIdentifier="ConfirmShopListViewController" id="TQe-PL-Egn" customClass="ConfirmShopListViewController" customModule="MyDish" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tKO-BW-2Od" customClass="ConfirmShopList" customModule="MyDish" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cU4-aK-BEf">
-                                <rect key="frame" x="7" y="14" width="585" height="501"/>
+                                <rect key="frame" x="7" y="14" width="360" height="568"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ConfirmShopListTableViewCell" rowHeight="70" id="9DO-hT-T6H" customClass="ConfirmShopListTableViewCell" customModule="MyDish" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="585" height="70"/>
+                                        <rect key="frame" x="0.0" y="28" width="360" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9DO-hT-T6H" id="2Vl-4n-Clo">
-                                            <rect key="frame" x="0.0" y="0.0" width="585" height="70"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="360" height="70"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2kt-Nd-c2I">
@@ -408,7 +412,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nbe-nT-hYj">
-                                                    <rect key="frame" x="535" y="17.5" width="35" height="35"/>
+                                                    <rect key="frame" x="310" y="17.5" width="35" height="35"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="35" id="Vay-a3-D5x"/>
                                                         <constraint firstAttribute="height" constant="35" id="b8J-Wq-3FZ"/>
@@ -450,7 +454,7 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BkY-qx-HGe">
-                                <rect key="frame" x="119.5" y="535" width="353" height="45"/>
+                                <rect key="frame" x="7" y="602" width="353" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="353" id="eD0-TV-SYT"/>
                                     <constraint firstAttribute="height" constant="45" id="iM9-is-M5v"/>
@@ -486,11 +490,11 @@
             <objects>
                 <viewController id="VHT-40-HG8" customClass="CookLaterViewController" customModule="MyDish" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dIT-8r-WJW">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6Zq-0c-FsD">
-                                <rect key="frame" x="0.0" y="20" width="600" height="531"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qC2-V5-6L4">
                                     <size key="itemSize" width="375" height="326"/>
@@ -595,7 +599,6 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="EGW-ov-ZnS">
-                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </toolbar>
                     <connections>

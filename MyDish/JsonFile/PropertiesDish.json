@@ -16,5 +16,22 @@
     "products":["jogurt","platki owsiane","mix musli","ulubione owoce"],
     "quantity":["150g","40g","50g","wedle uznania"],
     "steps":["pokroj owoce","dodaj wszystkie skladniki do naczynia","wymieszaj"]
+    },
+    {
+    "id": 4,
+    "products":["mieszanka orzechów","mieszanka bakalii","laska wanilii","twaróg sernikowy","żółtka","cukier puder","suszone morele"],
+    "quantity":["50g","100g","x1","500g","x5","100g","10szt"],
+    "steps":["Kroimy orzechy i bakalie","ucieramy żółtka z cukrem i wanilią","łączymy żółtka z twarogiem","dekorujemy deser morelami"]
+    },
+    {
+    "id": 5,
+    "products":["jajka ugotowane na twardo","papryka czerwona","czosnek","czerwona cebula","awokado hass","sok z cytryny","sol","pieprz","majonez","szczypiorek","bagietka","oliwa z oliwek"],
+    "quantity":["x4","x1","ząbek","x1","x2","x1/4","szczypta","szczypta","3łyżki","pęczek","x1","do skroplenia bagietek"],
+    "steps":["Kroimy składniki pasty","łączymy składniki sałatki(awokado,cebule,papryke,jajko i czosnek","przygotowujemy grzanki- kroimy i skrapiamy oliwa","podpiekamy grzanki na suchej patelni","paste układamy na ciepłych grzankach","dekorujemy papryka i ulubionymi ziołami","skrapiamy sokiem z cytryny"]
     }
 ]
+ 
+ 
+ 
+ 
+ 
