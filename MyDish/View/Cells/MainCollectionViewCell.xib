@@ -48,46 +48,41 @@
                         </connections>
                     </button>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="tXz-M0-ckF">
-                        <rect key="frame" x="149.5" y="260.5" width="77" height="63.5"/>
+                        <rect key="frame" x="165.5" y="260.5" width="45" height="42"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dSD-oY-74u" userLabel="NameLabel">
-                                <rect key="frame" x="0.0" y="0.0" width="77" height="22"/>
+                                <rect key="frame" x="0.0" y="0.0" width="45" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iit-9u-R32" userLabel="TimeLabel">
-                                <rect key="frame" x="0.0" y="23" width="77" height="17.5"/>
+                                <rect key="frame" x="0.0" y="21.5" width="45" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="3" id="W0p-iD-yZk">
-                                <rect key="frame" x="0.0" y="41.5" width="77" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="GwK-AD-TnW">
-                                        <rect key="frame" x="0.0" y="0.0" width="31" height="22"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="circle" catalog="system"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="5gJ-eJ-3br">
-                                        <rect key="frame" x="34" y="0.0" width="20" height="22"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="circle" catalog="system"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Tuc-hQ-WyO">
-                                        <rect key="frame" x="57" y="0.0" width="20" height="22"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="circle" catalog="system"/>
-                                    </button>
-                                </subviews>
-                            </stackView>
                         </subviews>
-                        <constraints>
-                            <constraint firstItem="iit-9u-R32" firstAttribute="centerY" secondItem="tXz-M0-ckF" secondAttribute="centerY" id="Qfw-u0-5O5"/>
-                            <constraint firstItem="W0p-iD-yZk" firstAttribute="top" secondItem="iit-9u-R32" secondAttribute="bottom" constant="1" id="w5P-IF-mXL"/>
-                        </constraints>
+                    </stackView>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="W0p-iD-yZk">
+                        <rect key="frame" x="149.5" y="302" width="77" height="22"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="GwK-AD-TnW">
+                                <rect key="frame" x="0.0" y="0.0" width="31" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="circle" catalog="system"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="5gJ-eJ-3br">
+                                <rect key="frame" x="34" y="0.0" width="20" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="circle" catalog="system"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Tuc-hQ-WyO">
+                                <rect key="frame" x="57" y="0.0" width="20" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="circle" catalog="system"/>
+                            </button>
+                        </subviews>
                     </stackView>
                 </subviews>
             </view>
@@ -95,11 +90,13 @@
                 <constraint firstAttribute="bottom" secondItem="3hT-up-VBk" secondAttribute="bottom" constant="21" id="7Eb-hE-0jD"/>
                 <constraint firstAttribute="trailing" secondItem="3hT-up-VBk" secondAttribute="trailing" constant="25" id="9YG-gJ-R68"/>
                 <constraint firstItem="sDv-rD-Llf" firstAttribute="centerX" secondItem="tXz-M0-ckF" secondAttribute="centerX" id="Fgi-b6-T0b"/>
+                <constraint firstAttribute="bottom" secondItem="tXz-M0-ckF" secondAttribute="bottom" constant="22.5" id="FzF-20-TP9"/>
                 <constraint firstItem="tXz-M0-ckF" firstAttribute="top" secondItem="sDv-rD-Llf" secondAttribute="bottom" constant="5.5" id="O0a-0D-zO8"/>
+                <constraint firstAttribute="bottom" secondItem="W0p-iD-yZk" secondAttribute="bottom" constant="1" id="cXR-0A-wDQ"/>
                 <constraint firstItem="UeO-EK-GVp" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="25" id="coj-bH-oHy"/>
-                <constraint firstAttribute="bottom" secondItem="tXz-M0-ckF" secondAttribute="bottom" constant="1" id="gm9-2P-mcg"/>
                 <constraint firstItem="tXz-M0-ckF" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="khV-eI-2Dz"/>
                 <constraint firstAttribute="bottom" secondItem="UeO-EK-GVp" secondAttribute="bottom" constant="21" id="nEH-x4-nEM"/>
+                <constraint firstItem="W0p-iD-yZk" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="y92-oW-Y1n"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="336" height="198"/>
